@@ -51,7 +51,7 @@ function KareninAlani(kenaruzunlugu) {
 */
 
 function CemberinCevresi(yaricap) {
-  return 2 * Math.PI * yaricap;
+  return 2 * pi * yaricap;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -65,8 +65,7 @@ function CemberinCevresi(yaricap) {
 */
 
 function CemberinAlani(yaricap, pi) {
-  pi = Math.PI;
-  return yaricap * yaricap * pi;
+  return (yaricap * yaricap * pi);
 }
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -89,11 +88,18 @@ function CemberinAlani(yaricap, pi) {
 */
 
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
+let ucetambolunenler,
+  enkucuk,
+  enbuyuk,
+  ucebolunenlerintoplami,
+  besyuzdenkucuksayilar,
+  siralisayilar,
+  tekraredensayilar;
 
 // 3a çözümü
 
-let enbuyuk = sayilar[0];
-let enkucuk = sayilar[0];
+enbuyuk = sayilar[0];
+enkucuk = sayilar[0];
 for (let i = 1; i < sayilar.length; i++) {
   if (sayilar[i] > enbuyuk) {
     enbuyuk = sayilar[i];
@@ -105,7 +111,7 @@ for (let i = 1; i < sayilar.length; i++) {
 
 // 3b çözümü:
 
-let ucetambolunenler = [];
+ucetambolunenler = [];
 sayilar.forEach(function (sayi) {
   if (sayi % 3 === 0) {
     ucetambolunenler.push(sayi);
@@ -114,11 +120,18 @@ sayilar.forEach(function (sayi) {
 
 // 3c çözümü:
 
-/* kodlar buraya */
+ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => {
+  return toplam + sayi;
+},0);
+
+
 
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar = sayilar.filter((sayi)) => {
+  return sayi < 500;
+}
+
 
 // 3e çözümü
 
